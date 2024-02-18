@@ -25,27 +25,88 @@
       "widgets": [
         {
           "name": "Left Starting Zone",
-          "type": "checkbox"
+          "type": "checkbox",
+          "colspan": 4
         },
         {
           "type": "spacer",
           "height": 20
         },
         {
-          "name": "Amp Notes",
+          "name": "Amp Notes Made",
           "type": "spinbox",
-          "prefix": "Auto"
+          "prefix": "Auto",
+          "row": 3,
+          "col":1
         },
         {
-          "name": "Speaker Notes",
+          "name": "Amp Notes Missed",
           "type": "spinbox",
-          "prefix": "Auto"
+          "prefix": "Auto",
+          "row": 3,
+          "col":3
         },
         {
-          "name": "Trap Notes",
+          "name": "Speaker Notes Made",
           "type": "spinbox",
-          "max": 3,
-          "prefix": "Auto"
+          "prefix": "Auto",
+          "row": 4,
+          "col":1
+        },
+        {
+          "name": "Speaker Notes Missed",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "row": 4,
+          "col":3
+        },
+        {
+        
+          "type": "spacer",
+          "height": 20
+          
+        },
+        {
+          "name": "Notes Picked Up",
+          "type": "heading",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "type": "picture",
+          "file": "fieldLabeled.png",
+          "colspan": 5,
+          "align": "center"
+        },
+        {
+          "name": "Use the labels in the above picture to identify notes used in auto.",
+          "type": "label",
+          "colspan": 5,
+          "align": "center"
+        },
+        
+        {
+          "name": "Notes Picked Up In Auto",
+          "type": "multicheckbox",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "colspan": 5,
+          "align": "center",
+          "noLabel": true
+        },
+        {
+          "name": "Auto Comments",
+          "type": "textarea",
+          "colspan": 5,
+          "align": "center"
         }
       ]
     },
@@ -55,34 +116,36 @@
         {
           "name": "Picked Up From",
           "type": "heading",
-          "colspan": 5,
+          "colspan": 4,
           "align": "center"
         },
         {
-          "name": "Ground",
-          "type": "spinbox"
+          "name": "How do did they acquire notes? Source means the note slid into their robot from the source",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
         },
         {
-          "name": "Source",
-          "type": "spinbox",
-          "row": 2,
-          "col": 3
+          "name": "Note Pickup Capabilities",
+          "type": "dropdown",
+          "options": [
+            "Ground Only",
+            "Source Only",
+            "Both, prefers Ground",
+            "Both, no preference",
+            "No Pickup"
+          ],
+          "col": 2
         },
         {
           "name": "Scoring",
           "type": "heading",
-          "colspan": 5,
+          "colspan": 4,
           "align": "center"
         },
         {
           "name": "Speaker Notes",
           "type": "spinbox"
-        },
-        {
-          "name": "Amplified Speaker Notes",
-          "type": "spinbox",
-          "row": 4,
-          "col": 3
         },
         {
           "name": "Amp Notes",
@@ -94,11 +157,6 @@
           "max": 3,
           "row": 5,
           "col": 3
-        },
-        {
-          "name": "Co-op Bonus",
-          "type": "checkbox",
-          "col": 2
         },
         {
           "type": "spacer",
@@ -116,11 +174,6 @@
             "5 (Very Effective)"
           ],
           "col": 2
-        },
-        {
-          "name": "Tipped",
-          "type": "checkbox",
-          "col": 2
         }
       ]
     },
@@ -131,38 +184,19 @@
           "name": "End Location",
           "type": "radio",
           "options": [
-            "Onstage and Spotlit",
             "Onstage",
             "Parked",
             "None"
           ],
-          "default": 3
+          "default": 2
         },
         {
           "name": "Failed Climb",
           "type": "checkbox"
         },
         {
-          "name": "Robots Onstage",
-          "type": "multicheckbox",
-          "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage"
-          ]
-        },
-        {
           "name": "Harmony",
           "type": "checkbox"
-        },
-        {
-          "name": "Trap Note Positions",
-          "type": "multicheckbox",
-          "options": [
-            "Stage Left",
-            "Stage Right",
-            "Center Stage"
-          ]
         },
         {
           "name": "Mechanical Failures",
