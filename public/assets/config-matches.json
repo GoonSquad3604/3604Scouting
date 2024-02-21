@@ -132,6 +132,7 @@
             "Ground Only",
             "Source Only",
             "Both, prefers Ground",
+            "Both, prefers Source",
             "Both, no preference",
             "No Pickup"
           ],
