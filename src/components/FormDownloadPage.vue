@@ -1,10 +1,10 @@
 <template>
   <FormPage title="Download Data" ref="page">
     <FormGroup :label-type="LabelType.None" :colspan="2" align="center">
-      <button @click="qrContainer?.showModal()">Generate QR Code</button>
+      <button @click="showQRandSave()">Generate QR Code</button>
     </FormGroup>
     <FormGroup :label-type="LabelType.None" :colspan="2" align="center">
-      <button @click="clearForm">Save and Clear Form</button>
+      <button v-if="saved" @click="clearForm">Save and Clear Form</button>
     </FormGroup>
     <FormGroup :label-type="LabelType.None">
       <div style="height: 20px;"></div>
@@ -24,8 +24,8 @@
     <div id="qr-dialog-contents">
       <button id="qr-dialog-close" @click="qrContainer?.close">Close</button>
       <div>
-        <input type="checkbox" v-model="excludeHeaders" id="exclude-headers" />
-        <label for="exclude-headers">Exclude headers in code</label>
+        <!-- <input type="checkbox" v-model="excludeHeaders" id="exclude-headers" /> -->
+        <!-- <label for="exclude-headers">Exclude headers in code</label> -->
       </div>
       <qrcode-vue :value="qrData" level="M" render-as="svg" :size="350" />
     </div>
@@ -49,13 +49,23 @@ const router = useRouter();
 const page = $ref<InstanceType<typeof FormPage>>();
 const qrContainer = $ref<HTMLDialogElement>();
 const qrData = $computed(() => widgets.toCSVString(widgets.getWidgetsAsCSV(), excludeHeaders));
-const excludeHeaders = $ref(false);
+const excludeHeaders = $ref(true);
+var saved = $ref(false);
 
 function clearForm() {
-  widgets.save();
+  //widgets.save();
+  saved = false;
   router.go(0); // Reload the page
 }
 
+function showQRandSave(){
+  qrContainer?.showModal();
+  if(!saved) {
+    widgets.save();
+  }
+  saved = true;
+  //router.go(0); // Reload the page
+}
 defineExpose({ title: computed(() => page?.title), setShown: computed(() => page?.setShown) });
 </script>
 

@@ -120,7 +120,7 @@
           "align": "center"
         },
         {
-          "name": "How do did they acquire notes? Source means the note slid into their robot from the source",
+          "name": "How did they acquire notes? Source means the note slid into their robot from the source",
           "type": "label",
           "colspan": 4,
           "align": "center"
@@ -206,18 +206,6 @@
         {
           "name": "Comments",
           "type": "textarea"
-        },
-        {
-          "name": "Stage Positions",
-          "type": "heading",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "type": "picture",
-          "file": "stage.png",
-          "colspan": 2,
-          "height": 250
         }
       ]
     }
