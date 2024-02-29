@@ -139,25 +139,69 @@
           "col": 2
         },
         {
+          "name": "Shot From",
+          "type": "heading",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "Where did they shoot from? If they can shoot from multiple locations choose open floor",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "Speaker Shooting Location",
+          "type": "dropdown",
+          "options": [
+            "Subwoofer Only",
+            "Podium Only",
+            "Open Floor"
+          ],
+          "col": 2
+        },
+        {
           "name": "Scoring",
           "type": "heading",
           "colspan": 4,
           "align": "center"
         },
         {
-          "name": "Speaker Notes",
+          "name": "Speaker Notes Made",
+          "prefix": "Teleop",
           "type": "spinbox"
         },
         {
-          "name": "Amp Notes",
+          "name": "Amp Notes Made",
+          "prefix": "Teleop",
           "type": "spinbox"
         },
         {
-          "name": "Trap Notes",
+          "name": "Trap Notes Made",
+          "prefix": "Teleop",
           "type": "spinbox",
-          "max": 3,
-          "row": 5,
-          "col": 3
+          "max": 3
+        },
+        {
+          "name": "Speaker Notes Missed",
+          "prefix": "Teleop",
+          "type": "spinbox",
+          "col": 3,
+          "row": 8
+        },
+        {
+          "name": "Amp Notes Missed",
+          "prefix": "Teleop",
+          "type": "spinbox",
+          "col": 3,
+          "row": 9
+        },
+        {
+          "name": "Trap Notes Missed",
+          "prefix": "Teleop",
+          "type": "spinbox",
+          "col": 3,
+          "row": 10
         },
         {
           "type": "spacer",
