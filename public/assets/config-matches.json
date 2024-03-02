@@ -14,9 +14,35 @@
           }
         },
         {
-          "name": "Starting Position",
-          "type": "positions",
-          "file": "field.png"
+          "type": "picture",
+          "file": "fieldAutoStarts.png",
+          "align": "center",
+          "colspan": 5
+        },
+        {
+          "name": "Use the labels in the above picture to starting locations for auto.",
+          "type": "label",
+          "colspan": 5,
+          "align": "center"
+        },
+        
+        {
+          "name": "Starting Location",
+          "type": "multicheckbox",
+          "validation": {
+            "comparison": "equal",
+            "value": 1
+          },
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "colspan": 5,
+          "align": "center",
+          "noLabel": true
         }
       ]
     },
