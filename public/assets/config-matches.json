@@ -193,12 +193,12 @@
           "align": "center"
         },
         {
-          "name": "Speaker Notes Made",
+          "name": "Amp Notes Made",
           "prefix": "Teleop",
           "type": "spinbox"
         },
         {
-          "name": "Amp Notes Made",
+          "name": "Speaker Notes Made",
           "prefix": "Teleop",
           "type": "spinbox"
         },
@@ -213,14 +213,14 @@
           "prefix": "Teleop",
           "type": "spinbox",
           "col": 3,
-          "row": 8
+          "row": 9
         },
         {
           "name": "Amp Notes Missed",
           "prefix": "Teleop",
           "type": "spinbox",
           "col": 3,
-          "row": 9
+          "row": 8
         },
         {
           "name": "Trap Notes Missed",
@@ -242,10 +242,47 @@
             "2",
             "3",
             "4",
-            "5 (Very Effective)"
+            "5"
           ],
           "col": 2
+        },
+        {
+          "name": "0 - Not played",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "1 - Attmepted but not effective. Egregious Penalties",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "2- Got in way of opponent, but was out maneuvered",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "3 - Average Defense. Hindered offense",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "4 - Mostly shut down one robot",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "5 - Effectively hindered scoring. Prevented 1-2 robots from scoring",
+          "type": "label",
+          "colspan": 4,
+          "align": "center"
         }
+
       ]
     },
     {
