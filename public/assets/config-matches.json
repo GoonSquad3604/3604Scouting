@@ -182,7 +182,8 @@
           "options": [
             "Subwoofer Only",
             "Podium Only",
-            "Open Floor"
+            "Open Floor",
+            "No Shooting"
           ],
           "col": 2
         },
@@ -234,53 +235,9 @@
           "height": 20
         },
         {
-          "name": "Defense Rating",
-          "type": "dropdown",
-          "options": [
-            "0 (Not Played)",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ],
+          "name": "Notes Shuttled/Passed",
+          "type": "spinbox",
           "col": 2
-        },
-        {
-          "name": "0 - Not played",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "1 - Attmepted but not effective. Egregious Penalties",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "2- Got in way of opponent, but was out maneuvered",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "3 - Average Defense. Hindered offense",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "4 - Mostly shut down one robot",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "5 - Effectively hindered scoring. Prevented 1-2 robots from scoring",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
         }
 
       ]
@@ -313,6 +270,58 @@
         {
           "name": "Comments",
           "type": "textarea"
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "name": "0 - Not played",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "name": "1 - Attmepted but not effective. Egregious Penalties",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "name": "2- Got in way of opponent, but was out maneuvered",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "name": "3 - Average Defense. Hindered offense",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "name": "4 - Mostly shut down one robot",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
+        },
+        {
+          "name": "5 - Effectively hindered scoring. Prevented 1-2 robots from scoring",
+          "type": "label",
+          "colspan": 2,
+          "align": "center"
         }
       ]
     }
