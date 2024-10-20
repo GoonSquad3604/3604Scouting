@@ -29,6 +29,7 @@ if (!fetchResult.ok) throw new FetchError("Configuration list", fetchResult);
 // Get text data, then convert to array
 const textData = await fetchResult.text();
 const list = $ref(textData.split("\n").map(value => value.trim()).filter(value => value.length > 0));
+
 </script>
 
 <style lang="postcss">

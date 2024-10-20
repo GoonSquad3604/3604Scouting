@@ -16,3 +16,7 @@ const props = defineProps<{
 const value = $ref([]);
 defineExpose({ index: useWidgetsStore().addWidgetValue(props.data, $$(value)) });
 </script>
+
+<style>
+
+</style>

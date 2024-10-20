@@ -1,7 +1,7 @@
 <template>
   <div v-show="show">
     <h1 class="page-heading">{{ config.data.heading ?? "Scouting" }}</h1>
-    <h3 v-if="teamDesc?.length > 0" class="page-heading">Team: {{ teamDesc }}</h3>
+    <h3 v-if="teamDesc?.length > 0" :class="setAllianceColor()" class="page-heading">Team: {{ teamDesc }}</h3>
     <img v-if="config.data.logo" :src="absoluteLogoPath" alt="Cannot load logo file" class="center" />
     <h2 class="page-heading">{{ title }}</h2>
     <div class="grid">
@@ -31,6 +31,15 @@ widgets.lastWidgetRowEnd = 1;
 
 // Expose page data
 defineExpose({ title: props.title, setShown: (value: boolean) => show = value });
+
+function setAllianceColor(){
+  const color = teamDesc.split(',')[0];
+  if(color == 'Red'){
+    return 'redAlliance';
+  } else {
+    return 'blueAlliance';
+  }
+}
 </script>
 
 <style>
@@ -47,5 +56,13 @@ defineExpose({ title: props.title, setShown: (value: boolean) => show = value })
 
 .page-heading {
   text-align: center;
+}
+
+.redAlliance {
+  color: red;
+}
+
+.blueAlliance { 
+  color: blue;
 }
 </style>
