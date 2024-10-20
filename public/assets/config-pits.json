@@ -7,16 +7,12 @@
       "name": "Team",
       "widgets": [
         {
+          "name": "Team Name",
+          "type": "text"
+        },
+        {
           "name": "Team Number",
           "type": "number"
-        },
-        {
-          "name": "Drive Coach",
-          "type": "text"
-        },
-        {
-          "name": "Driver Names",
-          "type": "text"
         }
       ]
     },
@@ -60,7 +56,8 @@
           "options": [
             "Neo",
             "Falcon",
-            "Cim"
+            "Cim",
+            "Kraken"
           ]
         },
         {
@@ -68,12 +65,8 @@
           "type": "dropdown",
           "options": [
             "No swerve",
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "Neo",
-            "Falcon",
+            "Mk 4",
+            "Mk 4i",
             "Custom"
           ]
         }
@@ -82,10 +75,6 @@
     {
       "name": "Match Play",
       "widgets": [
-        {
-          "name": "Cycle Time",
-          "type": "number"
-        },
         {
           "name": "Can Pick Up",
           "type": "multicheckbox",
@@ -119,6 +108,28 @@
             "Source"
           ],
           "defaultOption": true
+        },
+        {
+          "name": "Preferred Scoring Location",
+          "type": "dropdown",
+          "options": [
+            "Speaker",
+            "Amp",
+            "Trap"
+          ],
+          "defaultOption": true
+        },
+        {
+          "name": "Cycle Time Speaker",
+          "type": "number"
+        },
+        {
+          "name": "Cycle Time Amp",
+          "type": "number"
+        },
+        {
+          "name": "Cycle Time Trap",
+          "type": "number"
         },
         {
           "name": "Comments",
