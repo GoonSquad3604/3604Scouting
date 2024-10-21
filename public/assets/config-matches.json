@@ -1,6 +1,7 @@
 {
   "heading": "Crescendo - 2024",
   "logo": "logo.png",
+  "forceQualifiers": true,
   "pages": [
     {
       "name": "Setup",

@@ -28,6 +28,12 @@ export const useConfigStore = defineStore("config", () => {
   return $$({ name, data, validateSchema });
 });
 
+export const useSettingsStore = defineStore("settings", () => {
+  const alliance = $ref(0);
+
+  return $$({ alliance});
+});
+
 // Store to contain widget information and saved records
 export const useWidgetsStore = defineStore("widgets", () => {
   // Temporary array for widgets in the current loaded form (stored in RAM)

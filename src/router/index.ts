@@ -3,6 +3,7 @@ import FormView from "@/views/FormView.vue";
 import HomeView from "@/views/HomeView.vue";
 import InspectorView from "@/views/InspectorView.vue";
 import TPSExporterView from "@/views/TPSExporterView.vue";
+import SettingsView from "@/views/SettingsView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: "/tps-exporter",
       name: "tps-exporter",
       component: TPSExporterView
+    },
+    {
+      path: "/settings",
+      name: "settings",
+      component: SettingsView
     }
   ]
 });

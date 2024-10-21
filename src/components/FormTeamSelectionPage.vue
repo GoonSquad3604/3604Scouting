@@ -6,7 +6,7 @@
         <option value="1">Manual</option>
       </select>
     </FormGroup>
-    <FormGroup :label-type="LabelType.LabelTag" id="select-robot-input" name="Scouting Setup">
+    <FormGroup v-if="!config.data.wholeAlliance" :label-type="LabelType.LabelTag" id="select-robot-input" name="Scouting Setup">
       <select id="select-robot-input" v-model.number="robot">
         <option value="0">Red 1</option>
         <option value="1">Red 2</option>
@@ -32,12 +32,18 @@
     <FormGroup :label-type="LabelType.LabelTag" id="match-input" name="Match Number">
       <input id="match-input" type="number" v-model.lazy="matchNumber" :min="1" />
     </FormGroup>
-    <FormGroup :show="isTBA" :label-type="LabelType.LabelTag" id="team-input" name="Team">
+    <FormGroup v-if="!config.data.wholeAlliance" :show="isTBA" :label-type="LabelType.LabelTag" id="team-input" name="Team">
       <span v-if="currentMatch === null">&lt;No Data&gt;</span>
-      <select v-else id="team-input" v-model="selectedTeam">
+      <select v-else id="team-input" v-model="settings.alliance">
         <option v-for="[i, { color, index, number, name }] of teamsList.entries()" :key="i" :value="i">
           {{ color }} {{ index }}: {{ number }} ({{ name }})
         </option>
+      </select>
+    </FormGroup>
+    <FormGroup v-if="config.data.wholeAlliance" :label-type="LabelType.LabelTag" id="alliance-color" name="Team Color">
+      <select id="alliance-color" v-model="allianceColor">
+        <option value="Red" selected>Red</option>
+        <option value="Blue">Blue</option>
       </select>
     </FormGroup>
     <FormGroup :show="!isTBA" :label-type="LabelType.LabelTag" id="team-number-input" name="Team Number">
@@ -59,7 +65,7 @@ import { get, isEmpty } from "lodash";
 import { getError, getTeamName, isFailed, TBAData } from "@/common/tba";
 import { LabelType } from "@/common/shared";
 import { computed, Ref } from "vue";
-import { useConfigStore, useTBAStore, useWidgetsStore } from "@/common/stores";
+import { useConfigStore, useTBAStore, useWidgetsStore, useSettingsStore } from "@/common/stores";
 
 interface Team {
   color: string;
@@ -74,6 +80,7 @@ defineExpose({ title: computed(() => page?.title), setShown: computed(() => page
 const config = useConfigStore();
 const tba = useTBAStore();
 const widgets = useWidgetsStore();
+const settings = useSettingsStore();
 
 const selectType = $ref(0);
 const robot = $ref(0);
@@ -81,6 +88,7 @@ let eventKey = $ref("");
 const matchLevel = $ref(0);
 const matchNumber = $ref(1);
 const selectedTeam = $ref(0);
+let allianceColor = $ref("Red");
 
 const teamNumberManual = $ref(0);
 const teamColorManual = $ref("Red");
@@ -135,6 +143,7 @@ const teamsList = $computed(() => {
 
 // The exported team information
 const teamData = $computed(() => {
+  if(config.data.wholeAlliance) return `${allianceColor}`;
   if (isTBA) return teamsList[selectedTeam] ? Object.values(teamsList[selectedTeam]).join() : "";
   else return `${teamColorManual},0,${teamNumberManual},(no name available)`;
 });

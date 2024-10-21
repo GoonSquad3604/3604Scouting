@@ -61,6 +61,7 @@ export interface ConfigSchema {
   logo?: string;
   skipTeamSelection?: boolean;
   forceQualifiers?: boolean;
+  wholeAlliance?: boolean;
   pages: Page[];
   [k: string]: unknown;
 }

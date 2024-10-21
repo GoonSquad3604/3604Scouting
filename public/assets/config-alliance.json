@@ -1,0 +1,24 @@
+{
+  "heading": "2024 Alliance Strategy Scouting",
+  "logo": "logo.png",
+  "wholeAlliance": true,
+  "pages": [
+    {
+      "name": "Alliance Selection",
+      "widgets": [
+        {
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ]
+    }
+  ]
+}

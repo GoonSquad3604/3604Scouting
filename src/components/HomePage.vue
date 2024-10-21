@@ -10,6 +10,9 @@
   <h2>Tools</h2>
   <ul class="link-list">
     <li>
+      <RouterLink :to="{ name: 'settings' }">Settings</RouterLink>
+    </li>
+    <li>
       <RouterLink :to="{ name: 'inspector' }">Data Inspector</RouterLink>
     </li>
     <li>
