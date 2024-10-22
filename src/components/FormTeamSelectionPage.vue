@@ -6,16 +6,6 @@
         <option value="1">Manual</option>
       </select>
     </FormGroup>
-    <FormGroup v-if="!config.data.wholeAlliance" :label-type="LabelType.LabelTag" id="select-robot-input" name="Scouting Setup">
-      <select id="select-robot-input" v-model.number="robot">
-        <option value="0">Red 1</option>
-        <option value="1">Red 2</option>
-        <option value="2">Red 3</option>
-        <option value="3">Blue 1</option>
-        <option value="4">Blue 2</option>
-        <option value="5">Blue 3</option>
-      </select>
-    </FormGroup>
     <FormGroup :show="isTBA" :label-type="LabelType.LabelTag" id="event-key-input" name="Event Key">
       <input id="event-key-input" type="text" v-model="eventKey" @keyup.enter="loadTBAData" />
       <button @click="loadTBAData">Load</button>
@@ -34,7 +24,7 @@
     </FormGroup>
     <FormGroup v-if="!config.data.wholeAlliance" :show="isTBA" :label-type="LabelType.LabelTag" id="team-input" name="Team">
       <span v-if="currentMatch === null">&lt;No Data&gt;</span>
-      <select v-else id="team-input" v-model="settings.alliance">
+      <select v-else id="team-input" v-model="selectedTeam">
         <option v-for="[i, { color, index, number, name }] of teamsList.entries()" :key="i" :value="i">
           {{ color }} {{ index }}: {{ number }} ({{ name }})
         </option>
@@ -87,7 +77,7 @@ const robot = $ref(0);
 let eventKey = $ref("");
 const matchLevel = $ref(0);
 const matchNumber = $ref(1);
-const selectedTeam = $ref(0);
+const selectedTeam = $ref(settings.alliance);
 let allianceColor = $ref("Red");
 
 const teamNumberManual = $ref(0);
@@ -100,6 +90,8 @@ const teams = $ref<unknown[]>();
 const matches = $ref<unknown[]>();
 
 const isTBA = $computed(() => selectType === 0);
+
+console.log(settings);
 
 // The match data based on the selected level and number
 const currentMatch = $computed(() => {

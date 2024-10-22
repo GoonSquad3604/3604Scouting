@@ -29,7 +29,9 @@ export const useConfigStore = defineStore("config", () => {
 });
 
 export const useSettingsStore = defineStore("settings", () => {
-  const alliance = $ref(0);
+  let alliance = $ref(useStorage("deviceAlliance", 0));
+  
+  //const alliance = $ref(0);
 
   return $$({ alliance});
 });
