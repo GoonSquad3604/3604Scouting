@@ -91,8 +91,6 @@ const matches = $ref<unknown[]>();
 
 const isTBA = $computed(() => selectType === 0);
 
-console.log(settings);
-
 // The match data based on the selected level and number
 const currentMatch = $computed(() => {
   // Make sure matches are loaded
