@@ -60,6 +60,7 @@ function clearForm() {
 
 function showQRandSave(){
   qrContainer?.showModal();
+  console.log(qrData);
   if(!saved) {
     widgets.save();
   }

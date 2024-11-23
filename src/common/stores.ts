@@ -73,8 +73,11 @@ export const useWidgetsStore = defineStore("widgets", () => {
 
     // Escape the header and list of records, then put them together into a blob for downloading
     const header = escape(data.header);
-    const records = data.values.map(escape);
-    return (excludeHeaders ? records : [header, ...records]).join("\n");
+    var vals = [[config.name]];
+    const records = vals.concat(data.values).map(escape);
+    //const records = data.values.map(escape);
+    //console.log(data.values);
+    return (excludeHeaders ? records : [header, ...records]).join(",");
   }
 
   // Creates a download link for a given data object.
