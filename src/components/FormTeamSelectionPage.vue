@@ -131,6 +131,10 @@ const teamsList = $computed(() => {
   return result;
 });
 
+const allianceTeams = $computed(() => {
+  return teamsList.filter((t) => t.color ==  allianceColor);
+});
+
 // The exported team information
 const teamData = $computed(() => {
   if(config.data.wholeAlliance) return `${allianceColor}`;
@@ -142,7 +146,11 @@ const teamData = $computed(() => {
 widgets.addWidgetValue("EventKey", $$(eventKey));
 widgets.addWidgetValue("MatchLevel", $$(matchLevel));
 widgets.addWidgetValue("MatchNumber", $$(matchNumber));
-widgets.addWidgetValue("Team", $$(teamData));
+if(config.data.wholeAlliance){
+  widgets.addWidgetValue("AllianceMembers", $$(allianceTeams));
+} else {
+  widgets.addWidgetValue("Team", $$(teamData));
+}
 
 // Updates the loaded status message for a variable.
 // This function takes Ref objects to get a behavior similar to pass-by-reference in C++.
