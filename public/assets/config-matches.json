@@ -21,7 +21,7 @@
           "colspan": 5
         },
         {
-          "name": "Use the labels in the above picture to starting locations for auto.",
+          "name": "Use the labels in the above picture to choose the robot's starting position.",
           "type": "label",
           "colspan": 5,
           "align": "center"
@@ -38,8 +38,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "5"
+            "4"
           ],
           "colspan": 5,
           "align": "center",
@@ -53,87 +52,78 @@
         {
           "name": "Left Starting Zone",
           "type": "checkbox",
-          "colspan": 4
+          "col": 2,
+          "row": 1
+        },
+        {
+          "name": "Picked Up Coral From Source",
+          "type": "checkbox",
+          "col": 4,
+          "row": 1
         },
         {
           "type": "spacer",
           "height": 20
-        },
-        {
-          "name": "Amp Notes Made",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "row": 3,
-          "col":1
-        },
-        {
-          "name": "Amp Notes Missed",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "row": 3,
-          "col":3
-        },
-        {
-          "name": "Speaker Notes Made",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "row": 4,
-          "col":1
-        },
-        {
-          "name": "Speaker Notes Missed",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "row": 4,
-          "col":3
-        },
-        {
-        
-          "type": "spacer",
-          "height": 20
-          
-        },
-        {
-          "name": "Notes Picked Up",
-          "type": "heading",
-          "colspan": 5,
-          "align": "center"
         },
         {
           "type": "picture",
-          "file": "fieldLabeled.png",
-          "colspan": 5,
-          "align": "center"
+          "file": "coral.png",
+          "col": 2
         },
         {
-          "name": "Use the labels in the above picture to identify notes used in auto.",
-          "type": "label",
-          "colspan": 5,
-          "align": "center"
+          "name": "L4 Coral",
+          "type": "spinbox",
+          "col": 1,
+          "prefix": "Auto",
+          "buttonColor": "white"
         },
-        
         {
-          "name": "Notes Picked Up In Auto",
-          "type": "multicheckbox",
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"
-          ],
-          "colspan": 5,
+          "name": "L3 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white"
+        },
+        {
+          "name": "L2 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white"
+        },
+        {
+          "name": "L1 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white"
+        },
+        {
+          "type": "picture",
+          "file": "algae.png",
+          "col": 5,
+          "row": 3,
           "align": "center",
-          "noLabel": true
+          "colspan": 2
         },
         {
-          "name": "Auto Comments",
-          "type": "textarea",
-          "colspan": 5,
-          "align": "center"
+          "name": "Removed Algae From Reef",
+          "type": "spinbox",
+          "row": 4,
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
+        },
+        {
+          "name": "Algae in Processor",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
+        },
+        {
+          "name": "Algae in Net",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
         }
       ]
     },
@@ -141,104 +131,81 @@
       "name": "Teleop",
       "widgets": [
         {
-          "name": "Picked Up From",
-          "type": "heading",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "How did they acquire notes? Source means the note slid into their robot from the source",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "Note Pickup Capabilities",
-          "type": "dropdown",
-          "options": [
-            "Ground Only",
-            "Source Only",
-            "Both, prefers Ground",
-            "Both, prefers Source",
-            "Both, no preference",
-            "No Pickup"
-          ],
+          "type": "picture",
+          "file": "coral.png",
           "col": 2
         },
         {
-          "name": "Shot From",
-          "type": "heading",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "Where did they shoot from? If they can shoot from multiple locations choose open floor",
-          "type": "label",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "Speaker Shooting Location",
-          "type": "dropdown",
-          "options": [
-            "Subwoofer Only",
-            "Podium Only",
-            "Open Floor",
-            "No Shooting"
-          ],
-          "col": 2
-        },
-        {
-          "name": "Scoring",
-          "type": "heading",
-          "colspan": 4,
-          "align": "center"
-        },
-        {
-          "name": "Amp Notes Made",
-          "prefix": "Teleop",
-          "type": "spinbox"
-        },
-        {
-          "name": "Speaker Notes Made",
-          "prefix": "Teleop",
-          "type": "spinbox"
-        },
-        {
-          "name": "Trap Notes Made",
-          "prefix": "Teleop",
+          "name": "L4 Coral",
           "type": "spinbox",
-          "max": 3
+          "col": 1,
+          "prefix": "Auto",
+          "buttonColor": "white"
         },
         {
-          "name": "Speaker Notes Missed",
-          "prefix": "Teleop",
+          "name": "L3 Coral",
           "type": "spinbox",
-          "col": 3,
-          "row": 9
+          "prefix": "Auto",
+          "buttonColor": "white"
         },
         {
-          "name": "Amp Notes Missed",
-          "prefix": "Teleop",
+          "name": "L2 Coral",
           "type": "spinbox",
-          "col": 3,
-          "row": 8
+          "prefix": "Auto",
+          "buttonColor": "white"
         },
         {
-          "name": "Trap Notes Missed",
-          "prefix": "Teleop",
+          "name": "L1 Coral",
           "type": "spinbox",
-          "col": 3,
-          "row": 10
+          "prefix": "Auto",
+          "buttonColor": "white"
+        },
+        {
+          "type": "picture",
+          "file": "algae.png",
+          "col": 5,
+          "row": 1,
+          "align": "center",
+          "colspan": 2
+        },
+        {
+          "name": "Removed Algae From Reef",
+          "type": "spinbox",
+          "row": 2,
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
+        },
+        {
+          "name": "Algae in Processor",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
+        },
+        {
+          "name": "Algae in Net",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua"
         },
         {
           "type": "spacer",
           "height": 20
         },
         {
-          "name": "Notes Shuttled/Passed",
-          "type": "spinbox",
-          "col": 2
+          "name": "Did they cross the field to play defense?",
+          "type": "label",
+          "col": 3,
+          "colspan": 2
+        },
+        {
+          "name": "Defense",
+          "noLabel": true,
+          "type": "checkbox",
+          "col": 5,
+          "row": 6
         }
 
       ]
@@ -250,80 +217,23 @@
           "name": "End Location",
           "type": "radio",
           "options": [
-            "Onstage",
+            "Hanging From Deep Cage",
+            "Hanging From Shallow Cage",
             "Parked",
             "None"
           ],
-          "default": 2
+          "default": 3
         },
         {
           "name": "Failed Climb",
           "type": "checkbox"
         },
         {
-          "name": "Harmony",
-          "type": "checkbox"
-        },
-        {
-          "name": "Mechanical Failures",
-          "type": "text"
-        },
-        {
-          "name": "Comments",
+          "name": "Comments/MechanicalFailures",
           "type": "textarea"
-        },
-        {
-          "type": "spacer",
-          "height": 20
-        },
-        {
-          "name": "Defense Rating",
-          "type": "dropdown",
-          "options": [
-            "0 (Not Played)",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "name": "0 - Not played",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "name": "1 - Attmepted but not effective. Egregious Penalties",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "name": "2- Got in way of opponent, but was out maneuvered",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "name": "3 - Average Defense. Hindered offense",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "name": "4 - Mostly shut down one robot",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
-        },
-        {
-          "name": "5 - Effectively hindered scoring. Prevented 1-2 robots from scoring",
-          "type": "label",
-          "colspan": 2,
-          "align": "center"
+          
         }
+        
       ]
     }
   ]
