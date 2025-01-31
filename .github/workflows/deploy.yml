@@ -4,11 +4,11 @@ on:
   push:
     paths-ignore:
       - "docs/**"
-    branches: [ "main"  ]
+    branches: [ "main" ]
   pull_request:
     paths-ignore:
       - "docs/**"
-    branches: [ "main"]
+    branches: [ "main" ]
   workflow_dispatch:
     branches: [ "main" ]
 
@@ -38,8 +38,9 @@ jobs:
     - run: npm ci
     - run: npm run build -- --base=/${{ github.event.repository.name }}/
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
+        name: my-artifact-${{ matrix.runs-on }}
         path: ./dist
 
   # Deployment job
@@ -52,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
