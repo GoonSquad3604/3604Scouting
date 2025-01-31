@@ -128,7 +128,8 @@
         "type": { "const": "picture" },
         "file": { "type": "string" },
         "width": { "type": "integer" },
-        "height": { "type": "integer" }
+        "height": { "type": "integer" },
+        "rotateOnSetting": { "type": "boolean"}
       },
       "required": ["file"]
     },
@@ -172,7 +173,8 @@
         "min": { "type": "integer" },
         "max": { "type": "integer" },
         "allowKeyboardInput": { "type": "boolean" },
-        "buttonColor": { "type": "string" }
+        "buttonColor": { "type": "string" },
+        "buttonTextColor": {"type": "string"}
       },
       "required": ["name"]
     },
@@ -234,7 +236,8 @@
         "rowspan": { "type": "integer" },
         "colspan": { "type": "integer" },
         "labelColspan": { "type": "integer" },
-        "validation": { "$ref": "#/$defs/validation" }
+        "validation": { "$ref": "#/$defs/validation" },
+        "robotPos": { "type": "integer"}
       },
       "required": ["type"],
       "oneOf": [

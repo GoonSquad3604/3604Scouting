@@ -32,6 +32,7 @@ export type Widget = {
   colspan?: number;
   labelColspan?: number;
   validation?: Validation;
+  robotPos?: number;
   [k: string]: unknown;
 } & Widget1;
 export type Validation = {
@@ -116,6 +117,7 @@ export interface WidgetPicture {
   file: string;
   width?: number;
   height?: number;
+  rotateOnSetting?: boolean;
   [k: string]: unknown;
 }
 export interface WidgetPositions {
@@ -146,6 +148,7 @@ export interface WidgetSpinbox {
   max?: number;
   allowKeyboardInput?: boolean;
   buttonColor?: string;
+  buttonTextColor?: string;
   [k: string]: unknown;
 }
 export interface WidgetStopwatch {

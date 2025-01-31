@@ -29,11 +29,12 @@ export const useConfigStore = defineStore("config", () => {
 });
 
 export const useSettingsStore = defineStore("settings", () => {
-  let alliance = $ref(useStorage("deviceAlliance", 0));
-  
+  let team = $ref(useStorage("team", 0));
+  let flipField = $ref(useStorage("flipField", false));
   //const alliance = $ref(0);
+  let alliance = $ref(useStorage("alliance", "Red"));
 
-  return $$({ alliance});
+  return $$({ team, flipField, alliance});
 });
 
 // Store to contain widget information and saved records

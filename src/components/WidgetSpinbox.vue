@@ -19,7 +19,7 @@ const min = props.data.min ?? 0;
 const max = props.data.max ?? Number.MAX_SAFE_INTEGER;
 
 // Style object to set button background color
-const buttonColorStyle = $computed(() => ({ backgroundColor: props.data.buttonColor }));
+const buttonColorStyle = $computed(() => ({ backgroundColor: props.data.buttonColor, color: props.data.buttonTextColor }));
 
 let value = $ref(min);
 defineExpose({ index: useWidgetsStore().addWidgetValue(props.data, $$(value)) });

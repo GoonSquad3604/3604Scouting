@@ -1,5 +1,5 @@
 {
-  "heading": "Crescendo - 2024",
+  "heading": "Reefscape - 2025",
   "logo": "logo.png",
   "forceQualifiers": true,
   "pages": [
@@ -15,11 +15,19 @@
           }
         },
         {
+          "name": "Starting Position",
+          "type": "positions",
+          "file": "fieldAutoStarts.png",
+          "allowMultiple": false
+        },
+        {
           "type": "picture",
           "file": "fieldAutoStarts.png",
           "align": "center",
+          "rotateOnSetting": true,
           "colspan": 5
         },
+        
         {
           "name": "Use the labels in the above picture to choose the robot's starting position.",
           "type": "label",
@@ -38,7 +46,8 @@
             "1",
             "2",
             "3",
-            "4"
+            "4",
+            "5"
           ],
           "colspan": 5,
           "align": "center",
@@ -75,25 +84,29 @@
           "type": "spinbox",
           "col": 1,
           "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L3 Coral",
           "type": "spinbox",
           "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L2 Coral",
           "type": "spinbox",
           "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L1 Coral",
           "type": "spinbox",
           "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "type": "picture",
@@ -109,27 +122,42 @@
           "row": 4,
           "col": 4,
           "prefix": "Auto",
-          "buttonColor": "aqua"
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         },
         {
           "name": "Algae in Processor",
           "type": "spinbox",
           "col": 4,
           "prefix": "Auto",
-          "buttonColor": "aqua"
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         },
         {
           "name": "Algae in Net",
           "type": "spinbox",
           "col": 4,
           "prefix": "Auto",
-          "buttonColor": "aqua"
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         }
       ]
     },
     {
       "name": "Teleop",
       "widgets": [
+
+        {
+          "name": "Did they cross the field to play defense",
+          "type": "checkbox",
+          "col": 3,
+          "row": 1,
+          "colspan": 2
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
         {
           "type": "picture",
           "file": "coral.png",
@@ -139,73 +167,56 @@
           "name": "L4 Coral",
           "type": "spinbox",
           "col": 1,
-          "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L3 Coral",
           "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L2 Coral",
           "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "name": "L1 Coral",
           "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white"
+          "buttonColor": "white",
+          "buttonTextColor": "black"
         },
         {
           "type": "picture",
           "file": "algae.png",
-          "col": 5,
-          "row": 1,
+          "col": 4,
+          "row": 3,
           "align": "center",
           "colspan": 2
         },
         {
           "name": "Removed Algae From Reef",
           "type": "spinbox",
-          "row": 2,
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua"
+          "row": 4,
+          "col": 3,
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         },
         {
           "name": "Algae in Processor",
           "type": "spinbox",
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua"
+          "col": 3,
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         },
         {
           "name": "Algae in Net",
           "type": "spinbox",
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua"
-        },
-        {
-          "type": "spacer",
-          "height": 20
-        },
-        {
-          "name": "Did they cross the field to play defense?",
-          "type": "label",
           "col": 3,
-          "colspan": 2
-        },
-        {
-          "name": "Defense",
-          "noLabel": true,
-          "type": "checkbox",
-          "col": 5,
-          "row": 6
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
         }
 
       ]

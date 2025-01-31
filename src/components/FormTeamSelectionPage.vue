@@ -77,8 +77,8 @@ const robot = $ref(0);
 let eventKey = $ref("");
 const matchLevel = $ref(0);
 const matchNumber = $ref(1);
-const selectedTeam = $ref(settings.alliance);
-let allianceColor = $ref("Red");
+const selectedTeam = $ref(settings.team);
+const allianceColor = $ref(settings.alliance);
 
 const teamNumberManual = $ref(0);
 const teamColorManual = $ref("Red");

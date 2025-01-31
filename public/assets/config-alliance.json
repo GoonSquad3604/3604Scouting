@@ -4,10 +4,102 @@
   "wholeAlliance": true,
   "pages": [
     {
-      "name": "Alliance Selection",
+      "name": "Per Robot Details",
       "widgets": [
         {
-          "name": "Defense Rating",
+          "type": "heading",
+          "name": "From perspective of drive station, select the height of the cages from left to right",
+          "colspan": 6,
+          "align": "center"
+        },
+        {
+          "name": "Cage Left",
+          "type": "dropdown",
+          "options": [
+            "Shallow",
+            "Deep"
+          ],
+          "row": 2
+        },
+        {
+          "name": "Cage Middle",
+          "type": "dropdown",
+          "options": [
+            "Shallow",
+            "Deep"
+          ],
+          "row": 2,
+          "col": 3
+    
+        },
+        {
+          "name": "Cage Right",
+          "type": "dropdown",
+          "options": [
+            "Shallow",
+            "Deep"
+          ],
+          "row": 2,
+          "col": 5
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "For each robot select the how they can pick up coral",
+          "type": "heading",
+          "colspan": 6,
+          "align": "center"
+        },
+        {
+          "name": "Robot 1 Coral Intake",
+          "type": "dropdown",
+          "options": [
+            "None",
+            "From Source",
+            "From Ground",
+            "Both"
+          ],
+          "row": 5
+        },
+        {
+          "name": "Robot 2 Coral Intake",
+          "type": "dropdown",
+          "options": [
+            "None",
+            "From Source",
+            "From Ground",
+            "Both"
+          ],
+          "row": 5,
+          "col": 3
+    
+        },
+        {
+          "name": "Robot 3 Coral Intake",
+          "type": "dropdown",
+          "options": [
+            "None",
+            "From Source",
+            "From Ground",
+            "Both"
+          ],
+          "row": 5,
+          "col": 5
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Defense Ratings",
+          "type": "heading",
+          "colspan": 6,
+          "align": "center"
+        },
+        {
+          "name": "Robot 1 Defense Rating",
           "type": "dropdown",
           "options": [
             "0 (Not Played)",
@@ -16,8 +108,59 @@
             "3",
             "4",
             "5"
-          ]
+          ],
+          "row": 8
+        },
+        {
+          "name": "Robot 2 Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "row": 8,
+          "col": 3
+        },
+        {
+          "name": "Robot 3 Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "row": 8,
+          "col": 5
         }
+
+      ]
+    },
+    {
+      "name": "Comments and Summary",
+      "widgets": [
+        {
+          "name": "Robot 1 Comments",
+          "type": "textarea"
+          
+        },
+        {
+          "name": "Robot 2 Comments",
+          "type": "textarea"
+          
+        },
+        {
+          "name": "Robot 3 Comments",
+          "type": "textarea"
+          
+        }
+
       ]
     }
   ]
