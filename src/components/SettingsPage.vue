@@ -23,6 +23,9 @@
       <input type="checkbox" id="flip-field" v-model="settings.flipField">
       <label for="flip-field"> Flip Field Image</label>
     </div>
+    <div class="label" >
+      <label for="select-alliance-input">Alliance Scouting</label>
+    </div>
     <div >
       <select id="select-alliance-input" v-model.number="settings.alliance">
         <option value="Red">Red</option>

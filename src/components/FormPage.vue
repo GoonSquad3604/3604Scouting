@@ -32,6 +32,8 @@ let show = $ref(false);
 
 widgets.lastWidgetRowEnd = 1;
 
+//console.log(allianceDisplay);
+
 // Expose page data
 defineExpose({ title: props.title, setShown: (value: boolean) => show = value });
 

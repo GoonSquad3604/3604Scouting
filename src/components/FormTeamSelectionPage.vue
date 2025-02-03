@@ -142,12 +142,15 @@ const teamData = $computed(() => {
   else return `${teamColorManual},0,${teamNumberManual},(no name available)`;
 });
 
+console.log(teamsList);
+
 // Add values to export
 widgets.addWidgetValue("EventKey", $$(eventKey));
 widgets.addWidgetValue("MatchLevel", $$(matchLevel));
 widgets.addWidgetValue("MatchNumber", $$(matchNumber));
 if(config.data.wholeAlliance){
   widgets.addWidgetValue("AllianceMembers", $$(allianceTeams));
+  console.log(teamsList);
 } else {
   widgets.addWidgetValue("Team", $$(teamData));
 }
