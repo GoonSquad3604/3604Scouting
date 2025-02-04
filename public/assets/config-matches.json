@@ -15,16 +15,11 @@
           }
         },
         {
-          "name": "Starting Position",
-          "type": "positions",
-          "file": "fieldAutoStarts.png",
-          "allowMultiple": false
-        },
-        {
           "type": "picture",
           "file": "fieldAutoStarts.png",
           "align": "center",
-          "rotateOnSetting": true,
+          "changeImageOnFlip": true,
+          "flipImage": "fieldAutoStartsFlip.png",
           "colspan": 5
         },
         
@@ -123,7 +118,8 @@
           "col": 4,
           "prefix": "Auto",
           "buttonColor": "aqua",
-          "buttonTextColor": "black"
+          "buttonTextColor": "black",
+          "max": 6
         },
         {
           "name": "Algae in Processor",
@@ -203,7 +199,8 @@
           "row": 4,
           "col": 3,
           "buttonColor": "aqua",
-          "buttonTextColor": "black"
+          "buttonTextColor": "black" ,
+          "max": 6
         },
         {
           "name": "Algae in Processor",

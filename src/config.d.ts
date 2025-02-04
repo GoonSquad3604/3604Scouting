@@ -117,7 +117,8 @@ export interface WidgetPicture {
   file: string;
   width?: number;
   height?: number;
-  rotateOnSetting?: boolean;
+  changeImageOnFlip?: boolean;
+  flipImage?: string;
   [k: string]: unknown;
 }
 export interface WidgetPositions {

@@ -129,7 +129,8 @@
         "file": { "type": "string" },
         "width": { "type": "integer" },
         "height": { "type": "integer" },
-        "rotateOnSetting": { "type": "boolean"}
+        "changeImageOnFlip": { "type": "boolean"},
+        "flipImage": {"type": "string"}
       },
       "required": ["file"]
     },
