@@ -146,7 +146,7 @@
         {
           "name": "Did they cross the field to play defense",
           "type": "checkbox",
-          "col": 2,
+          "col": 1,
           "row": 1,
           "colspan": 1,
           "labelColspan": 3

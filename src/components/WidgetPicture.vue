@@ -13,7 +13,7 @@ const props = defineProps<{
 }>();
 
 // Get the full path to the file
-const absolutePath = $computed(() => settings.flipField ? `${import.meta.env.BASE_URL}assets/${props.data.flipImage}` : `${import.meta.env.BASE_URL}assets/${props.data.file}`);
+const absolutePath = $computed(() => settings.flipField && props.data.changeImageOnFlip ? `${import.meta.env.BASE_URL}assets/${props.data.flipImage}` : `${import.meta.env.BASE_URL}assets/${props.data.file}`);
 const flipField = $ref(settings.flipField);
 
 </script>

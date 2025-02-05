@@ -10,7 +10,7 @@
 import FormGroup from "@/components/FormGroup.vue";
 import { pick } from "lodash";
 import { LabelType, validationFuncs, validationFuncsRange } from "@/common/shared";
-import { useWidgetsStore } from "@/common/stores";
+import { useConfigStore, useWidgetsStore } from "@/common/stores";
 import { Widget } from "@/config";
 import WidgetDropdown from "@/components/WidgetDropdown.vue";
 import WidgetHeading from "@/components/WidgetHeading.vue";
@@ -38,9 +38,14 @@ interface WidgetDesc {
 }
 
 const widgets = useWidgetsStore();
+const config = useConfigStore();
 const desc = $ref<WidgetDesc>();
 
 let border = $ref("none");
+
+//Get alliance robot info for use in alliance level forms
+const robotPos = $ref(props.data.robotPos ? props.data.robotPos.valueOf() : -1);
+const robots = $ref(widgets.values.find(v => v.name == "AllianceMembers"));
 
 // Table containing metadata for each widget type
 const info = {
@@ -62,7 +67,7 @@ const info = {
 }[props.data.type];
 
 // Props to pass from the widget data to the sub-components
-const mappedProps = pick(props.data, ["name", "align", "row", "col", "rowspan", "colspan", "labelColspan"]);
+const mappedProps = pick(props.data, ["name", "align", "row", "col", "rowspan", "colspan", "labelColspan", "robotPos"]);
 
 // Validates the value of the widget.
 function validate() {

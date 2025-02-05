@@ -47,7 +47,7 @@
           "height": 10
         },
         {
-          "name": "For each robot select the how they can pick up coral",
+          "name": "For each robot select how they can pick up coral",
           "type": "heading",
           "colspan": 6,
           "align": "center"
@@ -61,7 +61,8 @@
             "From Ground",
             "Both"
           ],
-          "row": 5
+          "row": 5,
+          "robotPos": 1
         },
         {
           "name": "Robot 2 Coral Intake",
@@ -73,7 +74,8 @@
             "Both"
           ],
           "row": 5,
-          "col": 3
+          "col": 3,
+          "robotPos": 2
     
         },
         {
@@ -86,7 +88,8 @@
             "Both"
           ],
           "row": 5,
-          "col": 5
+          "col": 5,
+          "robotPos": 3
         },
         {
           "type": "spacer",
@@ -109,7 +112,8 @@
             "4",
             "5"
           ],
-          "row": 8
+          "row": 8,
+          "robotPos": 1
         },
         {
           "name": "Robot 2 Defense Rating",
@@ -123,7 +127,8 @@
             "5"
           ],
           "row": 8,
-          "col": 3
+          "col": 3,
+          "robotPos": 2
         },
         {
           "name": "Robot 3 Defense Rating",
@@ -137,7 +142,40 @@
             "5"
           ],
           "row": 8,
-          "col": 5
+          "col": 5,
+          "robotPos": 3
+        },
+        {
+          "type": "spacer",
+          "height": 10
+        },
+        {
+          "name": "Human Player",
+          "type": "heading",
+          "colspan": 6,
+          "align": "center"
+        },
+        {
+          "name": "Human Player Team",
+          "type": "dropdown",
+          "options": [
+            "Robot 1",
+            "Robot 2",
+            "Robot 3"
+          ],
+          "row": 11
+        },
+        {
+          "name": "Human Player Barge Misses",
+          "type": "spinbox",
+          "col": 3,
+          "row": 11
+        },
+        {
+          "name": "Human Player Barge Makes",
+          "type": "spinbox",
+          "col": 5,
+          "row": 11
         }
 
       ]
@@ -147,18 +185,25 @@
       "widgets": [
         {
           "name": "Robot 1 Comments",
-          "type": "textarea"
+          "type": "textarea",
+          "robotPos": 1
           
         },
         {
           "name": "Robot 2 Comments",
-          "type": "textarea"
+          "type": "textarea",
+          "robotPos": 2
           
         },
         {
           "name": "Robot 3 Comments",
-          "type": "textarea"
+          "type": "textarea",
+          "robotPos": 3
           
+        },
+        {
+          "name": "Human Player Comments",
+          "type": "textarea"
         }
 
       ]

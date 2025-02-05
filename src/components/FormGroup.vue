@@ -1,7 +1,7 @@
 <template>
   <div v-if="hasLabel" :style="{ gridArea: getGridArea(0) }" class="label" v-show="show">
-    <span v-if="labelType === LabelType.PlainText">{{ name }}</span>
-    <label v-else :for="id">{{ name }}</label>
+    <span v-if="labelType === LabelType.PlainText">{{ props.robotPos && props.robotPos > -1 ? name?.replace('Robot ' + props.robotPos, robots?.value[props.robotPos -1]): name }}</span>
+    <label v-else :for="id">{{ props.robotPos && props.robotPos > -1 ? name?.replace('Robot ' + props.robotPos, robots?.value[props.robotPos -1]) : name }}</label>
   </div>
   <div :style="{ gridArea: getGridArea(hasLabel ? 1 : 0), justifySelf: align }" class="widget" v-show="show">
     <slot></slot>
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { LabelType } from "@/common/shared";
-import { useWidgetsStore } from "@/common/stores";
+import { useConfigStore, useWidgetsStore } from "@/common/stores";
 
 type PosName = "row" | "col";
 
@@ -24,7 +24,8 @@ const props = withDefaults(defineProps<{
   rowspan?: number,
   colspan?: number,
   labelColspan?: number,
-  show?: boolean
+  show?: boolean,
+  robotPos?: number
 }>(), {
   rowspan: 1,
   colspan: 1,
@@ -35,8 +36,16 @@ const props = withDefaults(defineProps<{
 const hasLabel = $computed(() => props.labelType != LabelType.None);
 
 const widgets = useWidgetsStore();
+const config = useConfigStore();
 const rowData = calcGridPos("row");
 const colData = calcGridPos("col");
+
+//Get alliance robot info for use in alliance level forms
+var robotPos = $ref(props.robotPos ? props.robotPos.valueOf() : -1);
+var robots = $ref(widgets.values.find(v => v.name == "AllianceMembers"));
+//var currRobot = $computed(config.data.wholeAlliance ? robots?.value[robotPos -1] : '');
+
+//console.log(robots)
 
 const getGridArea = (n: number) => `${rowData[n][0]} / ${colData[n][0]} / ${rowData[n][1]} / ${colData[n][1]}`;
 

@@ -132,7 +132,8 @@ const teamsList = $computed(() => {
 });
 
 const allianceTeams = $computed(() => {
-  return teamsList.filter((t) => t.color ==  allianceColor);
+  var colorTeams = teamsList.filter((t) => t.color ==  allianceColor).map(l => l.number);
+  return colorTeams;
 });
 
 // The exported team information
@@ -149,6 +150,7 @@ widgets.addWidgetValue("EventKey", $$(eventKey));
 widgets.addWidgetValue("MatchLevel", $$(matchLevel));
 widgets.addWidgetValue("MatchNumber", $$(matchNumber));
 if(config.data.wholeAlliance){
+  widgets.addWidgetValue("AllianceColor", $$(allianceColor))
   widgets.addWidgetValue("AllianceMembers", $$(allianceTeams));
   console.log(teamsList);
 } else {
