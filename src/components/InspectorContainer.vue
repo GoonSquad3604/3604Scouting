@@ -100,8 +100,7 @@ function toCSVString(data: string[]): string {
     const escape = (s: string) => `"${s.replaceAll('"', '""')}"`;
 
     // Escape the header and list of records, then put them together into a blob for downloading
-    var form = '"' + entries[selectedIdx] + '"';
-    const records = [form].concat(data.map(escape));
+    const records = data.map(escape);
     
     return records.join();
   }
