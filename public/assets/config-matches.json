@@ -241,6 +241,22 @@
           "name": "Comments/MechanicalFailures",
           "type": "textarea"
           
+        },
+        {
+          "name": "Robot Broke",
+          "type": "checkbox"
+        },
+        {
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
         }
         
       ]
