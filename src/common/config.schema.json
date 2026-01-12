@@ -122,6 +122,20 @@
       },
       "required": ["name", "options"]
     },
+    "widgetMultiCounter": {
+      "type": "object",
+      "properties": {
+        "type": { "const": "multicounter" },
+        "intervals": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "showNegatives": { "type": "boolean" },
+        "buttonColor": { "type": "string" },
+        "buttonTextColor": {"type": "string"}
+      },
+      "required": ["name"]
+    },
     "widgetPicture": {
       "type": "object",
       "properties": {
@@ -223,7 +237,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["dropdown", "heading", "label", "text", "number", "checkbox", "multicheckbox", "picture", "positions", "radio", "spacer", "spinbox", "stopwatch", "textarea", "togglegrid"]
+          "enum": ["dropdown", "heading", "label", "text", "number", "checkbox", "multicheckbox", "multicounter", "picture", "positions", "radio", "spacer", "spinbox", "stopwatch", "textarea", "togglegrid"]
         },
         "prefix": { "type": "string" },
         "name": { "type": "string" },
@@ -249,6 +263,7 @@
         { "$ref": "#/$defs/widgetNumber" },
         { "$ref": "#/$defs/widgetCheckbox" },
         { "$ref": "#/$defs/widgetMultiCheckbox" },
+        { "$ref": "#/$defs/widgetMultiCounter" },
         { "$ref": "#/$defs/widgetPicture" },
         { "$ref": "#/$defs/widgetPositions" },
         { "$ref": "#/$defs/widgetRadio" },

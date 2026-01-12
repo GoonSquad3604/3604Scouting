@@ -14,6 +14,7 @@ export type Widget = {
     | "number"
     | "checkbox"
     | "multicheckbox"
+    | "multicounter"
     | "picture"
     | "positions"
     | "radio"
@@ -48,6 +49,7 @@ export type Widget1 =
   | WidgetNumber
   | WidgetCheckbox
   | WidgetMultiCheckbox
+  | WidgetMultiCounter
   | WidgetPicture
   | WidgetPositions
   | WidgetRadio
@@ -110,6 +112,14 @@ export interface WidgetCheckbox {
 export interface WidgetMultiCheckbox {
   type?: "multicheckbox";
   options: string[];
+  [k: string]: unknown;
+}
+export interface WidgetMultiCounter {
+  type?: "multicounter";
+  intervals?: number[];
+  showNegatives?: boolean;
+  buttonColor?: string;
+  buttonTextColor?: string;
   [k: string]: unknown;
 }
 export interface WidgetPicture {

@@ -1,0 +1,265 @@
+{
+  "heading": "Reefscape - 2025",
+  "logo": "logo.png",
+  "forceQualifiers": true,
+  "pages": [
+    {
+      "name": "Setup",
+      "widgets": [
+        {
+          "name": "Scouter Name",
+          "type": "text",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
+        },
+        {
+          "type": "picture",
+          "file": "fieldAutoStarts.png",
+          "align": "center",
+          "changeImageOnFlip": true,
+          "flipImage": "fieldAutoStartsFlip.png",
+          "colspan": 5
+        },
+        
+        {
+          "name": "Use the labels in the above picture to choose the robot's starting position.",
+          "type": "label",
+          "colspan": 5,
+          "align": "center"
+        },
+        
+        {
+          "name": "Starting Location",
+          "type": "multicheckbox",
+          "validation": {
+            "comparison": "equal",
+            "value": 1
+          },
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "colspan": 5,
+          "align": "center",
+          "noLabel": true
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "widgets": [
+        {
+          "name": "Left Starting Zone",
+          "type": "checkbox",
+          "col": 2,
+          "row": 1
+        },
+        {
+          "name": "Picked Up Coral From Source",
+          "type": "checkbox",
+          "col": 4,
+          "row": 1
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "type": "picture",
+          "file": "coral.png",
+          "col": 2
+        },
+        {
+          "name": "L4 Coral",
+          "type": "spinbox",
+          "col": 1,
+          "prefix": "Auto",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L3 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L2 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L1 Coral",
+          "type": "spinbox",
+          "prefix": "Auto",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "type": "picture",
+          "file": "algae.png",
+          "col": 5,
+          "row": 3,
+          "align": "center",
+          "colspan": 2
+        },
+        {
+          "name": "Removed Algae From Reef",
+          "type": "spinbox",
+          "row": 4,
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua",
+          "buttonTextColor": "black",
+          "max": 6
+        },
+        {
+          "name": "Algae in Processor",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "Algae in Net",
+          "type": "spinbox",
+          "col": 4,
+          "prefix": "Auto",
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "widgets": [
+
+        {
+          "name": "Did they cross the field to play defense",
+          "type": "checkbox",
+          "col": 1,
+          "row": 1,
+          "colspan": 1,
+          "labelColspan": 3
+        },
+        {
+          "type": "spacer",
+          "height": 20
+        },
+        {
+          "type": "picture",
+          "file": "coral.png",
+          "col": 2
+        },
+        {
+          "name": "L4 Coral",
+          "type": "spinbox",
+          "col": 1,
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L3 Coral",
+          "type": "spinbox",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L2 Coral",
+          "type": "spinbox",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "L1 Coral",
+          "type": "spinbox",
+          "buttonColor": "white",
+          "buttonTextColor": "black"
+        },
+        {
+          "type": "picture",
+          "file": "algae.png",
+          "col": 4,
+          "row": 3,
+          "align": "center",
+          "colspan": 2
+        },
+        {
+          "name": "Removed Algae From Reef",
+          "type": "spinbox",
+          "row": 4,
+          "col": 3,
+          "buttonColor": "aqua",
+          "buttonTextColor": "black" ,
+          "max": 6
+        },
+        {
+          "name": "Algae in Processor",
+          "type": "spinbox",
+          "col": 3,
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
+        },
+        {
+          "name": "Algae in Net",
+          "type": "spinbox",
+          "col": 3,
+          "buttonColor": "aqua",
+          "buttonTextColor": "black"
+        }
+
+      ]
+    },
+    {
+      "name": "Endgame",
+      "widgets": [
+        {
+          "name": "End Location",
+          "type": "radio",
+          "options": [
+            "Hanging From Deep Cage",
+            "Hanging From Shallow Cage",
+            "Parked",
+            "None"
+          ],
+          "default": 3
+        },
+        {
+          "name": "Failed Climb",
+          "type": "checkbox"
+        },
+        {
+          "name": "Comments/MechanicalFailures",
+          "type": "textarea"
+          
+        },
+        {
+          "name": "Robot Broke",
+          "type": "checkbox"
+        },
+        {
+          "name": "Defense Rating",
+          "type": "dropdown",
+          "options": [
+            "0 (Not Played)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+        
+      ]
+    }
+  ]
+}

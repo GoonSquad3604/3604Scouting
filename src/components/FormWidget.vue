@@ -25,6 +25,7 @@ import WidgetSpinbox from "@/components/WidgetSpinbox.vue";
 import WidgetStopwatch from "@/components/WidgetStopwatch.vue";
 import WidgetTextarea from "@/components/WidgetTextarea.vue";
 import WidgetToggleGrid from "@/components/WidgetToggleGrid.vue";
+import WidgetMultiCounter from "./WidgetMultiCounter.vue";
 
 const props = defineProps<{
   id: string,
@@ -56,6 +57,7 @@ const info = {
   number:        { class: WidgetInput,         label: LabelType.LabelTag  },
   checkbox:      { class: WidgetInput,         label: LabelType.LabelTag  },
   multicheckbox: { class: WidgetMultiCheckbox, label: LabelType.PlainText },
+  multicounter:  { class: WidgetMultiCounter, label: LabelType.LabelTag },
   picture:       { class: WidgetPicture,       label: LabelType.None      },
   positions:     { class: WidgetPositions,     label: LabelType.PlainText },
   radio:         { class: WidgetRadio,         label: LabelType.PlainText },

@@ -8,11 +8,7 @@
       "widgets": [
         {
           "name": "Scouter Name",
-          "type": "text",
-          "validation": {
-            "comparison": "greater",
-            "value": 0
-          }
+          "type": "text"
         },
         {
           "type": "picture",
@@ -28,25 +24,6 @@
           "type": "label",
           "colspan": 5,
           "align": "center"
-        },
-        
-        {
-          "name": "Starting Location",
-          "type": "multicheckbox",
-          "validation": {
-            "comparison": "equal",
-            "value": 1
-          },
-          "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ],
-          "colspan": 5,
-          "align": "center",
-          "noLabel": true
         }
       ]
     },
@@ -54,88 +31,42 @@
       "name": "Autonomous",
       "widgets": [
         {
-          "name": "Left Starting Zone",
-          "type": "checkbox",
-          "col": 2,
-          "row": 1
-        },
-        {
-          "name": "Picked Up Coral From Source",
-          "type": "checkbox",
-          "col": 4,
-          "row": 1
-        },
-        {
-          "type": "spacer",
-          "height": 20
-        },
-        {
-          "type": "picture",
-          "file": "coral.png",
-          "col": 2
-        },
-        {
-          "name": "L4 Coral",
-          "type": "spinbox",
-          "col": 1,
-          "prefix": "Auto",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "name": "L3 Coral",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "name": "L2 Coral",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "name": "L1 Coral",
-          "type": "spinbox",
-          "prefix": "Auto",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "type": "picture",
-          "file": "algae.png",
-          "col": 5,
-          "row": 3,
+          "name": "Fuel Scored",
+          "type": "heading",
           "align": "center",
           "colspan": 2
         },
         {
-          "name": "Removed Algae From Reef",
-          "type": "spinbox",
-          "row": 4,
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua",
-          "buttonTextColor": "black",
-          "max": 6
+          "name": "Fuel Passed",
+          "type": "heading",
+          "align": "center",
+          "colspan": 2,
+          "row": 1,
+          "col": 4
         },
         {
-          "name": "Algae in Processor",
-          "type": "spinbox",
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua",
-          "buttonTextColor": "black"
+          "name": "test",
+          "type": "multicounter",
+          "buttonColor": "grey",
+          "intervals": [1,5,10],
+          "showNegatives": true,
+          "noLabel": true,
+          "row": 2,
+          "col": 1
         },
         {
-          "name": "Algae in Net",
-          "type": "spinbox",
-          "col": 4,
-          "prefix": "Auto",
-          "buttonColor": "aqua",
-          "buttonTextColor": "black"
+          "type": "spacer",
+          "row": 2,
+          "col": 3
+        },
+        {
+          "name": "passed",
+          "type": "multicounter",
+          "intervals": [1,5,10],
+          "showNegatives": true,
+          "noLabel": true,
+          "row": 2,
+          "col": 4
         }
       ]
     },
@@ -183,37 +114,6 @@
           "name": "L1 Coral",
           "type": "spinbox",
           "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "type": "picture",
-          "file": "algae.png",
-          "col": 4,
-          "row": 3,
-          "align": "center",
-          "colspan": 2
-        },
-        {
-          "name": "Removed Algae From Reef",
-          "type": "spinbox",
-          "row": 4,
-          "col": 3,
-          "buttonColor": "aqua",
-          "buttonTextColor": "black" ,
-          "max": 6
-        },
-        {
-          "name": "Algae in Processor",
-          "type": "spinbox",
-          "col": 3,
-          "buttonColor": "aqua",
-          "buttonTextColor": "black"
-        },
-        {
-          "name": "Algae in Net",
-          "type": "spinbox",
-          "col": 3,
-          "buttonColor": "aqua",
           "buttonTextColor": "black"
         }
 
