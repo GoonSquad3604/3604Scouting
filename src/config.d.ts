@@ -86,7 +86,9 @@ export interface ValidationRange {
 export interface WidgetDropdown {
   type?: "dropdown";
   defaultOption?: boolean;
+  defaultValue?: string;
   options: string[];
+  stringValues?: boolean;
   [k: string]: unknown;
 }
 export interface WidgetHeading {
@@ -112,6 +114,7 @@ export interface WidgetCheckbox {
 export interface WidgetMultiCheckbox {
   type?: "multicheckbox";
   options: string[];
+  stringValues?: boolean;
   [k: string]: unknown;
 }
 export interface WidgetMultiCounter {

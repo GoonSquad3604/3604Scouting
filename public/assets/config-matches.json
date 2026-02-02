@@ -1,5 +1,5 @@
 {
-  "heading": "Reefscape - 2025",
+  "heading": "Rebuilt - 2026",
   "logo": "logo.png",
   "forceQualifiers": true,
   "pages": [
@@ -8,14 +8,18 @@
       "widgets": [
         {
           "name": "Scouter Name",
-          "type": "text"
+          "type": "text",
+          "validation": {
+            "comparison": "greater",
+            "value": 0
+          }
         },
         {
           "type": "picture",
-          "file": "fieldAutoStarts.png",
+          "file": "field.png",
           "align": "center",
           "changeImageOnFlip": true,
-          "flipImage": "fieldAutoStartsFlip.png",
+          "flipImage": "field.png",
           "colspan": 5
         },
         
@@ -24,6 +28,25 @@
           "type": "label",
           "colspan": 5,
           "align": "center"
+        },
+        {
+          "name": "Starting Location",
+          "type": "dropdown",
+          "align": "center",
+          "colspan": 5,
+          "noLabel": true,
+          "defaultOption": true,
+          "validation": {
+            "comparison": "greaterOrEqual",
+            "value": 0
+          },
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
         }
       ]
     },
@@ -45,93 +68,162 @@
           "col": 4
         },
         {
-          "name": "test",
+          "name": "Fuel Scored",
           "type": "multicounter",
           "buttonColor": "grey",
           "intervals": [1,5,10],
           "showNegatives": true,
           "noLabel": true,
           "row": 2,
-          "col": 1
+          "col": 1,
+          "colspan": 2,
+          "prefix": "Auto"
         },
         {
-          "type": "spacer",
-          "row": 2,
-          "col": 3
-        },
-        {
-          "name": "passed",
+          "name": "Fuel Passed",
           "type": "multicounter",
           "intervals": [1,5,10],
           "showNegatives": true,
           "noLabel": true,
+          "colspan": 2,
           "row": 2,
-          "col": 4
+          "col": 4,
+          "prefix": "Auto"
+        },
+        {
+          "name": "L1 Climb in Auto",
+          "type": "checkbox",
+          "row": 5
+        },
+        {
+          "name": "Entered Neutral Zone",
+          "type": "dropdown",
+          "options": [
+            "No",
+            "Through Trench",
+            "Over the Bump",
+            "Both"
+          ],
+          "row": 5,
+          "colspan": 2,
+          "col": 3,
+          "prefix": "Auto",
+          "stringValues": true,
+          "defaultOption": true,
+          "defaultValue": "No"
+        },
+
+        {
+          "name": "Failed Climb",
+          "type": "checkbox",
+          "prefix": "Auto"
         }
       ]
     },
     {
       "name": "Teleop",
       "widgets": [
-
         {
-          "name": "Did they cross the field to play defense",
-          "type": "checkbox",
-          "col": 1,
+          "name": "Fuel Scored",
+          "type": "heading",
+          "align": "center",
+          "colspan": 2
+        },
+        {
+          "name": "Fuel Passed",
+          "type": "heading",
+          "align": "center",
+          "colspan": 2,
           "row": 1,
-          "colspan": 1,
-          "labelColspan": 3
+          "col": 4
         },
         {
-          "type": "spacer",
-          "height": 20
-        },
-        {
-          "type": "picture",
-          "file": "coral.png",
-          "col": 2
-        },
-        {
-          "name": "L4 Coral",
-          "type": "spinbox",
+          "name": "Fuel Scored",
+          "type": "multicounter",
+          "buttonColor": "grey",
+          "intervals": [1,5,10],
+          "showNegatives": true,
+          "noLabel": true,
+          "row": 2,
           "col": 1,
-          "buttonColor": "white",
-          "buttonTextColor": "black"
+          "colspan": 2
         },
         {
-          "name": "L3 Coral",
-          "type": "spinbox",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
+          "name": "Fuel Passed",
+          "type": "multicounter",
+          "intervals": [1,5,10],
+          "showNegatives": true,
+          "noLabel": true,
+          "colspan": 2,
+          "row": 2,
+          "col": 4
         },
         {
-          "name": "L2 Coral",
-          "type": "spinbox",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
-        },
-        {
-          "name": "L1 Coral",
-          "type": "spinbox",
-          "buttonColor": "white",
-          "buttonTextColor": "black"
+          "name": "Entered Neutral Zone",
+          "type": "dropdown",
+          "options": [
+            "No",
+            "Through Trench",
+            "Over the Bump",
+            "Both"
+          ],
+          "row": 5,
+          "colspan": 2,
+          "col": 3,
+          "stringValues": true
         }
-
       ]
     },
     {
       "name": "Endgame",
       "widgets": [
         {
+          "type": "heading",
+          "name": "What Roles did the robot play during the phases of the game?",
+          "colspan": 4,
+          "align": "center"
+        },
+        {
+          "name": "Active Phase Roles",
+          "type": "multicheckbox",
+          "options": [
+            "Clean-Up",
+            "Passer",
+            "Defender",
+            "Cycler",
+            "Thief"
+          ],
+          "row": 2,
+          "colspan": 2,
+          "stringValues": true
+        },
+        {
+          "name": "Inactive Phase Roles",
+          "type": "multicheckbox",
+          "options": [
+            "Clean-Up",
+            "Passer",
+            "Defender",
+            "Cycler",
+            "Thief"
+          ],
+          "row": 2,
+          "col": 2,
+          "colspan": 2,
+          "stringValues": true
+
+        },
+        {
           "name": "End Location",
           "type": "radio",
           "options": [
-            "Hanging From Deep Cage",
-            "Hanging From Shallow Cage",
-            "Parked",
-            "None"
+            "None",
+            "L1",
+            "L2",
+            "L3"
           ],
-          "default": 3
+          "default": 0,
+          "row": 4
         },
         {
           "name": "Failed Climb",
