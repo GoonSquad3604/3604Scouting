@@ -1,7 +1,7 @@
 <template>
   <select :id="currentId" v-model="value">
     <option v-if="data.defaultOption && !useStringValue" :value="useStringValue ? '' : -1" selected disabled>Select...</option>
-    <option v-for="[i, value] of data.options.entries()" :value="useStringValue ? value : i" :key="i">{{ value }}</option>
+    <option v-for="[i, value] of data.options.entries()" :value="useStringValue ? value : i" :key="useStringValue ? value : i">{{ value }}</option>
   </select>
 </template>
 
@@ -14,7 +14,8 @@ const props = defineProps<{
   currentId: string
 }>();
 const useStringValue = props.data.stringValues;
+const firstEntry = props.data.options[0];
 
-const value = $ref(useStringValue ? props.data.defaultOption ? props.data.defualtValue : "": props.data.defaultOption ? -1 : 0);
+const value = $ref(useStringValue ? firstEntry : props.data.defaultOption ? -1 : 0);
 defineExpose({ index: useWidgetsStore().addWidgetValue(props.data, $$(value)) });
 </script>

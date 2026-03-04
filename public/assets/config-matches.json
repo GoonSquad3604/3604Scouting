@@ -16,10 +16,10 @@
         },
         {
           "type": "picture",
-          "file": "field.png",
+          "file": "fieldAutoStarts.png",
           "align": "center",
           "changeImageOnFlip": true,
-          "flipImage": "field.png",
+          "flipImage": "fieldAutoStartsFlip.png",
           "colspan": 5
         },
         
@@ -105,12 +105,9 @@
             "Both"
           ],
           "row": 5,
-          "colspan": 2,
-          "col": 3,
+          "col": 4,
           "prefix": "Auto",
-          "stringValues": true,
-          "defaultOption": true,
-          "defaultValue": "No"
+          "stringValues": true
         },
 
         {
@@ -123,6 +120,7 @@
     {
       "name": "Teleop",
       "widgets": [
+        
         {
           "name": "Fuel Scored",
           "type": "heading",
@@ -158,6 +156,18 @@
           "row": 2,
           "col": 4
         },
+
+        {
+          "name": "Shooting Location",
+          "type": "dropdown",
+          "options": [
+            "From Anywhere",
+            "From Specific Range",
+            "Up Against Hub Only",
+            "Made Shots While Moving"
+          ],
+          "row": 5
+        },
         {
           "name": "Entered Neutral Zone",
           "type": "dropdown",
@@ -168,9 +178,9 @@
             "Both"
           ],
           "row": 5,
-          "colspan": 2,
-          "col": 3,
-          "stringValues": true
+          "col": 4,
+          "stringValues": true,
+          "defaultValue": "No"
         }
       ]
     },
@@ -184,34 +194,73 @@
           "align": "center"
         },
         {
+          "type": "picture",
+          "file": "roleDefinitions.png",
+          "colspan": 3,
+          "rowspan": 5,
+          "col": 4,
+          "row": 1
+        },
+
+        {
+          "type": "heading",
+          "name": "Active Phase Roles",
+          "colspan": 2,
+          "align": "center",
+          "row": 2,
+          "col": 1
+        },
+        {
+          "type": "heading",
+          "name": "Inactive Phase Roles",
+          "colspan": 1,
+          "align": "center",
+          "row": 2,
+          "col": 3
+        },
+        {
           "name": "Active Phase Roles",
           "type": "multicheckbox",
           "options": [
             "Clean-Up",
+            "Cycler",
             "Passer",
             "Defender",
-            "Cycler",
-            "Thief"
+            "Thief",
+            "Hoarder"
           ],
-          "row": 2,
+          "row": 3,
           "colspan": 2,
-          "stringValues": true
+          "col": 1,
+          "stringValues": true,
+          "noLabel": true,
+          "align": "center"
+
         },
         {
           "name": "Inactive Phase Roles",
           "type": "multicheckbox",
           "options": [
             "Clean-Up",
+            "Cycler",
             "Passer",
             "Defender",
-            "Cycler",
-            "Thief"
+            "Thief",
+            "Hoarder"
           ],
-          "row": 2,
-          "col": 2,
-          "colspan": 2,
-          "stringValues": true
+          "row": 3,
+          "col": 3,
+          "colspan": 1,
+          "stringValues": true,
+          "noLabel": true,
+          "align": "center"
 
+        },
+        {
+          "type": "heading",
+          "name": "Climb/Comments",
+          "colspan": 4,
+          "align": "center"
         },
         {
           "name": "End Location",
@@ -223,15 +272,16 @@
             "L3"
           ],
           "default": 0,
-          "row": 4
+          "row": 5
         },
         {
           "name": "Failed Climb",
           "type": "checkbox"
         },
         {
-          "name": "Comments/MechanicalFailures",
-          "type": "textarea"
+          "name": "Comments",
+          "type": "textarea",
+          "colspan": 8
           
         },
         {
@@ -241,6 +291,9 @@
         {
           "name": "Defense Rating",
           "type": "dropdown",
+          "col": 1,
+          "colspan": 2,
+          "labelColspan": 2,
           "options": [
             "0 (Not Played)",
             "1",

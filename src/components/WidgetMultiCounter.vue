@@ -35,8 +35,8 @@ const increment = (increment: number) => value = clamp(value + increment, 0, Inf
 <style lang="postcss">
 .counter {
   text-align: center;
-  width: 4em;
-  font-size: 24px;
+  width: 5em;
+  font-size: 28px;
   appearance: textfield;
 
   &::-webkit-outer-spin-button,
@@ -52,8 +52,8 @@ const increment = (increment: number) => value = clamp(value + increment, 0, Inf
   display: flex;
   place-items: center;
   margin: auto;
-  width: 4ch;
-  height: 4ch;
+  width: 5ch;
+  height: 5ch;
   background-color: black;
   color: white;
   font-size: 48px;
@@ -62,12 +62,12 @@ const increment = (increment: number) => value = clamp(value + increment, 0, Inf
 }
 
 .button-div{
-  margin-bottom: 2ch;
-  margin-top: 2ch;
+  margin-bottom: 3ch;
+  margin-top: 3ch;
 }
 .counter-btn {
-  width: 6ch;
-  height: 6ch;
+  width: 10ch;
+  height: 10ch;
   padding: 0;
   font-size: large;
   font-weight: bold;
