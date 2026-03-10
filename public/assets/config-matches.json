@@ -250,7 +250,7 @@
         {
           "type": "heading",
           "name": "Climb/Comments",
-          "colspan": 4,
+          "colspan": 5,
           "align": "center"
         },
         {
@@ -266,8 +266,14 @@
           "row": 5
         },
         {
+          "type": "spacer"
+        },
+        {
           "name": "Failed Climb",
           "type": "checkbox"
+        },
+        {
+          "type": "spacer"
         },
         {
           "name": "Comments",
@@ -276,8 +282,14 @@
           
         },
         {
+          "type": "spacer"
+        },
+        {
           "name": "Robot Broke",
           "type": "checkbox"
+        },
+        {
+          "type": "spacer"
         },
         {
           "name": "Defense Rating",
