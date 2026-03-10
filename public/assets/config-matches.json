@@ -190,7 +190,7 @@
         {
           "type": "heading",
           "name": "What Roles did the robot play during the phases of the game?",
-          "colspan": 4,
+          "colspan": 5,
           "align": "center"
         },
         {
@@ -204,10 +204,10 @@
         {
           "type": "heading",
           "name": "Inactive Phase Roles",
-          "colspan": 1,
+          "colspan": 2,
           "align": "center",
           "row": 2,
-          "col": 3
+          "col": 4
         },
         {
           "name": "Active Phase Roles",
@@ -240,8 +240,8 @@
             "Hoarder"
           ],
           "row": 3,
-          "col": 3,
-          "colspan": 1,
+          "col": 4,
+          "colspan": 2,
           "stringValues": true,
           "noLabel": true,
           "align": "center"
@@ -272,7 +272,7 @@
         {
           "name": "Comments",
           "type": "textarea",
-          "colspan": 8
+          "colspan": 4
           
         },
         {
