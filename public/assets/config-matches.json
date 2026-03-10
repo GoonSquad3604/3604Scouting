@@ -194,15 +194,6 @@
           "align": "center"
         },
         {
-          "type": "picture",
-          "file": "roleDefinitions.png",
-          "colspan": 3,
-          "rowspan": 5,
-          "col": 4,
-          "row": 1
-        },
-
-        {
           "type": "heading",
           "name": "Active Phase Roles",
           "colspan": 2,
