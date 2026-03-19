@@ -189,27 +189,11 @@
       "widgets": [
         {
           "type": "heading",
-          "name": "What Roles did the robot play during the phases of the game?",
+          "name": "What Roles did the robot play during the match?",
           "colspan": 5,
           "align": "center"
         },
         {
-          "type": "heading",
-          "name": "Active Phase Roles",
-          "colspan": 2,
-          "align": "center",
-          "row": 2,
-          "col": 1
-        },
-        {
-          "type": "heading",
-          "name": "Inactive Phase Roles",
-          "colspan": 2,
-          "align": "center",
-          "row": 2,
-          "col": 4
-        },
-        {
           "name": "Active Phase Roles",
           "type": "multicheckbox",
           "options": [
@@ -221,27 +205,8 @@
             "Hoarder"
           ],
           "row": 3,
-          "colspan": 2,
+          "colspan": 5,
           "col": 1,
-          "stringValues": true,
-          "noLabel": true,
-          "align": "center"
-
-        },
-        {
-          "name": "Inactive Phase Roles",
-          "type": "multicheckbox",
-          "options": [
-            "Clean-Up",
-            "Cycler",
-            "Passer",
-            "Defender",
-            "Thief",
-            "Hoarder"
-          ],
-          "row": 3,
-          "col": 4,
-          "colspan": 2,
           "stringValues": true,
           "noLabel": true,
           "align": "center"
